@@ -1,0 +1,97 @@
+  <nav class="fixed w-full h-20 z-100 top-0 bg-<%= @nav_bg %> shadow-<%= @shadow ? 'xl' : 'none' %>">
+  <%
+=begin%>
+ <div class="flex justify-between items-center w-full h-full py-4 px-2 m-auto 2xl:px-16"> 
+<%
+=end%>
+    <%
+=begin%>
+ <div class="animate-spin-slow">
+      <%= link_to root_path do %>
+        <%= image_tag("navLogo.png", alt: "Logo", width: 85, height: 50) %>
+      <% end %>
+    </div> 
+<%
+=end%>
+    <%
+=begin%>
+ <div>   
+<%
+=end%>
+
+<div class="flex justify-end items-start w-full h-full py-4 px-10 2xl:px-16">
+  <div>
+    <ul class="hidden md:flex text-<%= @link_color %>">
+      <li class="mr-14 m-auto uppercase text-sm hover:border-b hover:text-[#5651e5] hover:scale-105 transition-all duration-all hover:border-y-black">
+        <%= link_to "Home", root_path %>
+      </li>
+      <li class="mr-14 m-auto uppercase text-sm hover:border-b hover:text-[#5651e5] hover:scale-105 transition-all duration-all hover:border-y-black">
+        <%= link_to "About", "abouts" %>
+      </li>
+      <li class="mr-14 m-auto uppercase text-sm hover:border-b hover:text-[#5651e5] hover:scale-105 transition-all duration-all hover:border-y-black">
+        <%= link_to "Skills", "#skills" %>
+      </li>
+      <li class="mr-14 m-auto uppercase text-sm hover:border-b hover:text-[#5651e5] hover:scale-105 transition-all duration-all hover:border-y-black">
+        <%= link_to "Projects", "#projects" %>
+      </li>
+      <li class="mr-14 m-auto uppercase text-sm hover:border-b hover:text-[#5651e5] hover:scale-105 transition-all duration-all hover:border-y-black">
+        <%= link_to "Contact", "#contact" %>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+
+
+<div id="home" class="w-full pt-32 md:pt-0 h-screen text-center">
+  <div class="max-w-[1240px] mx-auto h-full flex p-2 justify-center items-center">
+    <div>
+         <p class="uppercase text-sm tracking-widest text-gray-600">
+        LET'S BUILD SOMETHING AMAZING
+      </p>
+      <h1 class="py-3 text-gray-700">
+        Hi, I am <span class="text-[#5651e5]">Mwaura Frankiline</span>
+      </h1>
+
+      <h2 class="text-gray-700 text-center">I am a</h2>
+
+      <h1 class="py-3 fjalla-one text-3xl text-md text-[#5651e5]" id="typewriter">
+        <span></span>
+      </h1>
+
+      <p class="kulim-park py-4 text-gray-600 max-w-[85%] m-auto">
+        Looking for a full-stack developer with a track record of success? Look no further! With 1 year of self-taught experience and graduation from top bootcamp Moringa, I have the skills and passion to build stunning, scalable web applications. From small to large-scale projects, I have used React and Ruby on Rails to create solutions that delight users and drive results. So why settle for less when you can have the best? Let's build something great together.
+      </p>
+      <div class="flex items-center justify-between max-w-[330px] md:gap-4 gap-2 m-auto py-4">
+        <div class="rounded-full shadow-lg shadow-gray-400 md:p-6 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+          <%= link_to "https://www.linkedin.com/in/frankiline-mwaura/", target: "_blank", rel: "noreferrer" do %>
+            <%= fa_icon "linkedin", class: "md:text-2xl text-md" %>
+          <% end %>
+        </div>
+        <div class="rounded-full shadow-lg shadow-gray-400 md:p-6 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+          <%= link_to "https://github.com/mwaurajr", target: "_blank", rel: "noreferrer" do %>
+            <%= fa_icon "github", class: "md:text-2xl text-md" %>
+          <% end %>
+        </div>
+        <div class="rounded-full shadow-lg shadow-gray-400 md:p-6 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+          <%= link_to "https://twitter.com/_Jamhuri_", target: "_blank", rel: "noreferrer" do %>
+            <%= fa_icon "twitter", class: "md:text-2xl text-md" %>
+          <% end %>
+        </div>
+        <div class="rounded-full shadow-lg shadow-gray-400 md:p-6 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+          <%= link_to "tel:0790855427" do %>
+            <%= fa_icon "phone", class: "md:text-2xl text-md" %>
+          <% end %>
+        </div>
+        <div class="rounded-full shadow-lg shadow-gray-400 md:p-6 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+          <%= link_to "https://wa.me/254759783349", target: "_blank", rel: "noreferrer" do %>
+            <%= fa_icon "whatsapp", class: "md:text-2xl text-md" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'typewriter' %>
